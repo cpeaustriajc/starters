@@ -5,7 +5,7 @@ coding agent to good code by default.
 
 | Template | Stack | State |
 |---|---|---|
-| [`tanstack-start-todo`](https://github.com/cpeaustriajc/tanstack-start-todo) (submodule) | TanStack Start, Effect, React Aria (shadcn), oxlint, TypeScript 7 | baseline; rebuild to the agreed design in progress |
+| [`tanstack-start-todo`](https://github.com/cpeaustriajc/tanstack-start-todo) (submodule) | TanStack Start, Effect, React Aria (shadcn), oxlint, TypeScript 7 | statechart regions per feature, Drizzle rc.5 on Effect, nine import gates |
 | `nextjs-todo` | Next.js 16, Effect, nuqs, next-safe-action | planned |
 
 Each template is a todo app: a web page, a JSON API and a CLI. A todo app is small enough to
