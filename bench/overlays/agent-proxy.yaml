@@ -1,0 +1,18 @@
+# Harbor compose overlay for hosts whose only egress is a local HTTPS proxy, such as Claude Code
+# cloud sessions (proxy at 127.0.0.1:<port>, CAs in /root/.ccr/ca-bundle.crt). The container
+# shares the host network so it reaches the proxy, and keeps the proxy settings for agents that
+# need the network. The image is built beforehand with `docker build --network host` (see
+# agent-proxy-run.sh): Compose builds through bake, which refuses a host-network build without
+# an entitlement flag that Harbor does not pass. `build: !reset null` makes Harbor's
+# `docker compose build` a no-op. Not for hosts with direct internet access.
+services:
+  main:
+    image: ${AGENT_PROXY_IMAGE:?set AGENT_PROXY_IMAGE to the tag built by agent-proxy-run.sh}
+    pull_policy: never
+    build: !reset null
+    network_mode: host
+    environment:
+      HTTPS_PROXY: ${HTTPS_PROXY:?set HTTPS_PROXY to the local proxy, e.g. http://127.0.0.1:34339}
+      NO_PROXY: ${NO_PROXY:-}
+      NODE_EXTRA_CA_CERTS: /etc/ssl/certs/ca-certificates.crt
+      SSL_CERT_FILE: /etc/ssl/certs/ca-certificates.crt
