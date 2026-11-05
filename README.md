@@ -1,6 +1,6 @@
-# templates
+# starters
 
-Project templates for personal projects, and a benchmark of how well each ecosystem steers a
+Starter templates for personal projects, and a benchmark of how well each ecosystem steers a
 coding agent to good code by default.
 
 | Template | Stack | State |
