@@ -1,0 +1,3 @@
+[submodule "tanstack-start-todo"]
+	path = tanstack-start-todo
+	url = https://github.com/cpeaustriajc/tanstack-start-todo.git
