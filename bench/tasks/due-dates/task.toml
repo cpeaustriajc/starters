@@ -1,0 +1,21 @@
+schema_version = "1.4"
+
+[task]
+name = "starters/due-dates"
+description = "Add an optional due date to each todo in the tanstack-start-todo template."
+keywords = ["tanstack-start-todo", "feature"]
+
+[metadata]
+template = "tanstack-start-todo"
+template_commit = "18d17934fec6e49df7c28ff720f4d318c8c3e710"
+
+[verifier]
+environment_mode = "shared"
+timeout_sec = 1200
+
+[agent]
+timeout_sec = 3600
+
+[environment]
+build_timeout_sec = 1800
+workdir = "/app"
