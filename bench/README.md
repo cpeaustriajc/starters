@@ -118,7 +118,7 @@ is not tracked. `harbor view bench/jobs` browses the results.
 
 ## Cloud run (2026-11-05)
 
-A Claude Code cloud session, Ubuntu 24.04, `starters` at 377f366f with the submodule at
+A Claude Code cloud session, Ubuntu 24.04, `starters` at bf689c6 (377f366f before the history rewrite) with the submodule at
 18d17934. The steps below ran in order; each shows the command and the output that matters.
 
 ### VM and Docker
